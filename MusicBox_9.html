@@ -1,0 +1,124 @@
+<<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Beat Machine</title>
+  
+  <div class="navbar-header">
+		<nav id="title" class="navbar-brand" href="/">Beat Machine</nav>
+  </div>
+  <style type="text/css">
+  
+ 
+
+
+ nav#nav1 {margin-top: 32px;
+  }
+  nav#nav1 > a {
+	background: #000;
+	color: #990000;
+	padding: 10px;
+	text-decoration: none;
+	font-family: Verdana, sans-serif;
+	border: 2px solid #696969;
+	border-radius: 13px;
+	}
+	nav#nav1 > a:hover{background: #998b8b;}
+	
+  
+ #app{
+	background-color: #000;
+	
+	}
+
+
+.navbar-header {
+	font-size: 38px;
+	font-family: Verdana,sans-serif;
+	color: #990000;
+}
+
+#buttons {
+
+  position: absolute;
+  top: 150px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+ }
+ 
+ #but-0-0, #but-0-1, #but-0-2,
+ #but-1-0, #but-1-1, #but-1-2,
+ #but-2-0, #but-2-1, #but-2-2 {
+	background-color: #000;
+	border: 1px solid #990000;
+	color: #990000;
+	
+ }
+
+.button-row {
+  width: 100%; 
+  height: 33.3333%; 
+  
+}
+
+.button-row button {
+  width: 33.3333%;
+  height: 100%; 
+}
+
+#sounds {
+  display: none;
+}
+  </style>
+    <script type="text/javascript">
+	function playSounds(n){
+	var a = documnet.getElementById('sound-' + n)};
+	a.currentTime = 0;
+	a.play();
+	</script>
+  </head>
+
+
+  <body id="app"">
+  
+  <nav id = "nav1"> 
+      <a href="#" onmousedown="">6 buttons (2x3)</a>
+      <a href="#" onmousedown="">9 buttons (3x3)</a>
+      <a href="#" onmousedown="">12 buttons (3x4)</a>
+      <a href="#" onmousedown="">16 buttons (4x4)</a>
+	  
+	 
+    </nav>
+  
+  
+
+  <div id="buttons">
+    <div id="but-row-0" class="button-row">
+      <button id="but-0-0" onclick="playSound(0);">0,0: Chimes</button><button id="but-0-1" onclick="playSound(1);">0,1: Chord</button><button id="but-0-2" onclick="playSound(1);">0,2: Chord</button>
+    </div>
+    <div id="but-row-1" class="button-row">
+      <button id="but-1-0" onclick="playSound(2);">1,0: Ding</button><button id="but-1-1" onclick="playSound(3)">1,1: Notify</button><button id="but-1-2" onclick="playSound(1);">1,2: Chord</button>
+    </div>
+    <div id="but-row-2" class="button-row">
+      <button id="but-2-0" onclick="playSound(4)">2,0: Recycle</button><button id="but-2-1" onclick="playSound(5)">2,1: Tada</button><button id="but-2-2" onclick="playSound(1);">2,2: Chord</button>
+    </div>
+  </div>
+ 
+	
+	<div id="sounds">
+    <audio id="sound-0" src="chimes.mp3" preload="auto"></audio>
+    <audio id="sound-1" src="chord.mp3" preload="auto"></audio>
+    <audio id="sound-2" src="ding.mp3" preload="auto"></audio>
+    <audio id="sound-3" src="notify.mp3" preload="auto"></audio>
+    <audio id="sound-4" src="recycle.mp3" preload="auto"></audio>
+    <audio id="sound-5" src="tada.mp3" preload="auto"></audio>
+  </div>
+  
+  </body>
+  </html>
+  
+
+
